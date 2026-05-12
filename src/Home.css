@@ -61,9 +61,6 @@ body {
   height: 9px;
   pointer-events: none;
   z-index: 2;
-  offset-path: path(
-    "M 208,-6 A 130,80,231,0,0,370,196 A 130,80,231,0,0,208,-6"
-  );
   offset-rotate: 0deg;
   will-change: offset-distance;
   animation: orbit-move 8s linear infinite;

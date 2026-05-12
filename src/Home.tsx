@@ -10,8 +10,16 @@ import profileIcon from "./assets/robot_2.png";
 
 function App() {
   const [showHow, setShowHow] = useState(false);
+  const [orbitScale, setOrbitScale] = useState(1);
   const isAnimating = useRef(false);
   const touchStartY = useRef(0);
+
+  useEffect(() => {
+    const update = () => setOrbitScale(Math.min(window.innerWidth, 430) / 430);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   useEffect(() => {
     const go = (down: boolean) => {
@@ -58,7 +66,14 @@ function App() {
         <section className="hero-section">
           <img src={planetImg} alt="" className="planet" />
           <img src={orbitLineImg} alt="" className="orbit-line" />
-          <img src={moonImg} alt="" className="moon" />
+          <img
+            src={moonImg}
+            alt=""
+            className="moon"
+            style={{
+              offsetPath: `path("M ${208*orbitScale},${-6*orbitScale} A ${130*orbitScale},${80*orbitScale},231,0,0,${370*orbitScale},${196*orbitScale} A ${130*orbitScale},${80*orbitScale},231,0,0,${208*orbitScale},${-6*orbitScale}")`
+            } as React.CSSProperties}
+          />
 
           <div className="hero-content">
             <h1 className="hero-title-black">
