@@ -73,7 +73,16 @@ function App() {
             <button className="login-button">로그인/회원가입 →</button>
           </div>
 
-          <div className="scroll-indicator">
+          <div
+            className="scroll-indicator"
+            onClick={() => {
+              if (!isAnimating.current && !showHow) {
+                isAnimating.current = true;
+                setShowHow(true);
+                setTimeout(() => { isAnimating.current = false; }, 700);
+              }
+            }}
+          >
             <span>Scroll to learn more</span>
             <span className="chevron">⌄</span>
           </div>

@@ -151,6 +151,12 @@ body {
   color: #aaa;
   font-size: 10px;
   padding-bottom: max(120px, 15vh);
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.scroll-indicator:hover {
+  transform: translateY(-6px);
 }
 
 .chevron {
