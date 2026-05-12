@@ -164,7 +164,7 @@ function RadarChart() {
               transformOrigin: "center",
               transform: showYellow ? "scale(1)" : "scale(0)",
               opacity: showYellow ? 1 : 0,
-             transition: "transform 1800ms cubic-bezier(0.22, 1, 0.36, 1), opacity 1200ms ease",
+             transition: "transform 3800ms cubic-bezier(0.22, 1, 0.36, 1), opacity 1200ms ease",
             }}
           />
 
