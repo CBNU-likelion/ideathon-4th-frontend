@@ -16,7 +16,12 @@ body,
 body {
   min-width: 320px;
   background-color: #eef0fa;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 }
 
 button {
