@@ -56,7 +56,7 @@ function App() {
   }, [showHow]);
 
   return (
-    <div className="flex min-h-screen justify-center bg-[#eef0fa]">
+    <div className="home-root flex min-h-screen justify-center bg-[#eef0fa]">
       <div className="relative h-screen w-full max-w-[430px] overflow-hidden bg-white">
         <div className={`sections-wrapper${showHow ? " show-how" : ""}`}>
           {/* Hero Section */}

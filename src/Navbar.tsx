@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import roadmapIcon from "./assets/automation.png";
 import coffeechatIcon from "./assets/3p.png";
@@ -5,6 +6,7 @@ import aiIcon from "./assets/smart_toy.png";
 import profileIcon from "./assets/robot_2.png";
 
 function Navbar() {
+  const navigate = useNavigate();
   return (
     <>
       {/* Bottom Navigation */}
@@ -22,7 +24,7 @@ function Navbar() {
             </div>
             <span>커피챗</span>
           </div>
-          <div className="nav-item">
+          <div className="nav-item" onClick={() => navigate("/analysis")}>
             <div className="nav-icon">
               <img src={aiIcon} alt="" />
             </div>

@@ -13,7 +13,7 @@ body,
   padding: 0;
 }
 
-body {
+body:not(.bottom-nav *) {
   min-width: 320px;
   background-color: #eef0fa;
   font-family:
